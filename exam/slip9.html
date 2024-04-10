@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+body{
+background-color:skyblue;
+}
+</style>
+</head>
+<body>
+<form name="Membership_login" onsubmit="validfunction()"
+method="post">
+<center>
+<h3>Membership form</h3>
+Username: <input type="text" name="user"></br></br>
+Password: <input type="password" name="pass"></br></br>
+<button type="submit" value="Login">LogIn</button>
+</center>
+</form>
+<script type="text/javascript">
+function validfunction()
+{
+var user = document.Membership_login.user.value
+var pass = document.Membership_login.pass.value
+if(user ==="rohan" && pass === "rohan123")
+alert("login successful")
+else if(user == null || pass=="")
+alert("Empty username or password field.")
+else
+alert("inavlid credentials.")
+}
+</script>
+</body>
+</html>
