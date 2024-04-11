@@ -1,0 +1,30 @@
+<html> 
+<head> 
+<script type="text/javascript">  
+function display()
+{
+	n=f1.name1.value; 
+	if(window.XMLHttpRequest) 
+	xmlhttp=new XMLHttpRequest(); 
+	
+	xmlhttp.open("GET","slip26.php?name1="+n,true); 
+	xmlhttp.send(); 
+	xmlhttp.onreadystatechange=function()
+	{ 
+		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+		{ 
+			document.getElementById('res').innerHTML = xmlhttp.responseText; 
+		} 
+	} 
+} 
+</script> 
+<body> 
+<form name="f1"> 
+ENTER EMPLOYEE NAME
+<input type="text" name="name1"/><br>
+<input type="button" value="submit" onclick="display()"/> 
+</form> 
+<div id='res'></div> 
+</body> 
+</html>
+
